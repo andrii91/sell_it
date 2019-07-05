@@ -1,0 +1,10 @@
+@import '../../mq';
+
+@media #{$desktopHD} {
+    @import '../desktop';
+    & {
+      header {
+        background-size: cover;
+      }
+    }
+}

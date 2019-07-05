@@ -1,0 +1,14 @@
+@import '../../mq';
+
+@media #{$tabletPortrait} {
+    @import '../mobile';
+  	& {
+      header {
+        min-height: 100vh;
+      }
+      .item-col {
+        max-width: 45%;
+      }
+      
+	}
+}
