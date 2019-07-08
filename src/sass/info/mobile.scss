@@ -183,12 +183,33 @@
 
   nav {
     padding: 5px 0;
-    background: rgba(0, 0, 0, .7);
+    background: #625ea7;
+    .logo {
+      margin-top: 5px;
+    }
+    .phone {
+      margin-top: 7px;
+    }
+    &.fixed {
+      .logo {
+        svg {
+          width: 50px;
+        }
+      }
+    }
   }
 
   header {
-    padding: 70px 0;
+    padding: 105px 0;
     min-height: inherit;
+        background-position: left;
+    .button {
+      display: block;
+      text-align: center;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   br {
@@ -203,6 +224,10 @@
     margin: 0 0 30px;
     font-size: 30px;
     line-height: 1;
+    max-width: 320px;
+    span {
+      display: block;
+    }
   }
 
   .line {
@@ -210,14 +235,18 @@
   }
 
   .button {
-    font-size: 14px;
+    font-size: 16x;
     line-height: 1;
     padding: 20px 20px;
   }
 
   .play-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 254px;
     span {
-      display: none;
+//      display: none;
     }
   }
 
@@ -237,6 +266,7 @@
 
   .difficulties-item .content.two {
     margin: 0 0 40px;
+    padding-left: 15px;
   }
 
   .difficulties-item .content .title {
@@ -251,6 +281,9 @@
   .h2-title {
     font-size: 21px;
     line-height: 1;
+    br {
+      display: block;
+    }
   }
 
   .difficulties {
@@ -278,14 +311,20 @@
     text-align: center;
     color: #000;
     font-family: "TT Commons";
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
+    padding-bottom: 20px;
   }
 
   .what {
     padding: 50px 0;
     position: relative;
     z-index: 2;
+    .h2-title {
+      br {
+        display: block;
+      }
+    }
   }
 
   .difficulties {
@@ -293,7 +332,7 @@
   }
 
   .what-item {
-    padding-left: 25px;
+    padding-left: 35px;
   }
 
   .what .h2-title {
@@ -336,7 +375,7 @@
   }
 
   .speaker {
-    padding-left: 15px;
+    padding-left: 35px;
   }
 
   .speaker-img {
@@ -395,7 +434,7 @@
   .form p {
     color: #4a484c;
     font-family: "TT Commons";
-    font-size: 14px;
+    font-size: 16x;
     line-height: 1.2;
     font-weight: 400;
     margin-bottom: 10px;
@@ -423,7 +462,7 @@
   .programs-item .content ol li {
     color: #222026;
     font-family: "TT Commons";
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1;
     margin-bottom: 15px;
@@ -469,6 +508,9 @@
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 45px;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .programs-bottom .items .item-col {
@@ -483,7 +525,7 @@
   .h2-subtitle {
     color: #625ea7;
     font-family: "TT Commons";
-    font-size: 14px;
+    font-size: 16x;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 44px;
@@ -513,7 +555,7 @@
   }
 
   .what-num {
-    left: 1px;
+    left: 15px;
   }
 
   .results-item {
@@ -541,6 +583,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 1;
+    padding-right: 126px;
   }
 
   .results-carousel .row .col-xl-6 {
@@ -617,7 +660,7 @@
     margin-right: auto;
     color: #4a484c;
     font-family: "TT Commons";
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1;
   }
@@ -666,5 +709,14 @@
     margin-left: auto;
     margin-right: auto;
   }
-
+  .number-item {
+    right: 20px;
+  }
+  .speaker .name span {
+        max-width: 260px;
+  }
+  .results-carousel img {
+    right: 15px;
+    min-height: 50px;
+  }
 }
