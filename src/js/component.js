@@ -97,7 +97,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function () {
-  $("input[type='tel']").mask("+38 (999) 999-9999");
+  // $("input[type='tel']").mask("+38 (999) 999-9999");
 
   function getUrlVars() {
     var vars = {};
@@ -157,33 +157,38 @@ $(document).ready(function () {
           var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
           if (!pattern.test($(this).val())) {
             $("input[name=email]").val('');
-            $(this).addClass('error').parent('span').append('<div class="allert"><p>Укажите коректный e-mail</p>' + alertImage + '</div>');
+            $(this).addClass('error').parent('.fild').append('<div class="allert"><p>Укажите коректный e-mail</p>' + alertImage + '</div>');
             error = 1;
             $(":input.error:first").focus();
+            return false;
           }
         } else if ($(this).attr("type") == 'tel') {
           var patterntel = /^()[- +()0-9]{9,18}/i;
           if (!patterntel.test($(this).val())) {
             $("input[name=phone]").val('');
-            $(this).addClass('error').parent('span').append('<div class="allert"><p>Укажите номер телефона в формате +3809999999</p>' + alertImage + '</div>');
+            $(this).addClass('error').parent('.fild').append('<div class="allert"><p>Укажите номер телефона в формате +3809999999</p>' + alertImage + '</div>');
             error = 1;
             $(":input.error:first").focus();
+            return false;
           }
         } else {
-          $(this).addClass('error').parent('span').append('<div class="allert"><p>Заполните это поле</p>' + alertImage + '</div>');
+          $(this).addClass('error').parent('.fild').append('<div class="allert"><p>Заполните это поле, указав имя</p>' + alertImage + '</div>');
           error = 1;
           $(":input.error:first").focus();
+          return false;
         }
-        return;
+        error = 1;
+        return false;
       } else {
         error = 0;
-        $(this).addClass('error').parent('span').find('.allert').remove();
+        $(this).addClass('error').parent('.fild').find('.allert').remove();
       }
     });
     if (error !== 1) {
       $(this).unbind('submit').submit();
     }
   });
+
 
   /*end form valid*/
 
@@ -210,5 +215,48 @@ $(document).ready(function () {
 
   });
 
+  
+ 
+ $('input[name="phone"]').intlTelInput({
+		defaultCountry: "ru",
+		initialCountry: "auto",
+		preferredCountries: ["ua", "ru", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge'],
+		autoPlaceholder: 'aggressive',
+		nationalMode: false,
+		customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+			return "+" + selectedCountryData.dialCode;
+		},
+		geoIpLookup: function(success, failure) {
+			/*
+			$.get( "https://ip-api.com/json/", function( data ) {
+				var countryCode = (data.countryCode) ? data.countryCode : "ru";
+				success(countryCode);
+			}, "json" );*/
+			
+			$.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+				var countryCode = (resp && resp.country) ? resp.country : "ru";
+				success(countryCode);
+			});
+		},
+		separateDialCode: false,
+		formatOnDisplay: false,
+//		utilsScript: 'https://mk.beauty-matrix.ru/assets/plugins/intltelinput/js/utils.js',
+	});
+ 
+   
+   $('.check').each(function(){
+      $(this).on('change', function(){
+           var form = $(this).parents('form');
 
+           if( $(this).prop('checked') ) {
+               
+               form.find('.phone').slideDown();
+           } else {
+               form.find('.phone').slideUp();
+           }
+       });
+   });
+
+  const observer = lozad();
+observer.observe();
 });

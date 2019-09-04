@@ -200,42 +200,73 @@
   }
 
   header {
-    padding: 105px 0;
+    padding: 49px 0 54px;
     min-height: inherit;
-        background-position: left;
+    background-position: 54% top;
+    background-size: cover;
+    position: relative;
+    margin-top: 50px;
+    &:before {
+      content: "";
+      background: linear-gradient(to bottom,rgba(255,255,255,0) 0,transparent 4%,rgba(0,0,0,.5) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 3;
+    }
     .button {
       display: block;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
       margin-left: auto;
       margin-right: auto;
     }
   }
-
+  .header-item {
+    padding-left: 25px;
+  }
   br {
     display: none;
   }
 
   .header-item .title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: "TT Commons";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
   }
 
   .header-item h1 {
     margin: 0 0 30px;
-    font-size: 30px;
-    line-height: 1;
-    max-width: 320px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 28px;
+    max-width: 196px;
+    margin-bottom: 27px;
     span {
       display: block;
     }
   }
-
+  .header-item p {
+    font-size: 19px;
+font-weight: 400;
+    max-width: 296px;
+  }
   .line {
     display: none;
   }
 
   .button {
-    font-size: 16x;
+    font-size: 16px;
     line-height: 1;
     padding: 20px 20px;
   }
@@ -256,7 +287,7 @@
   }
 
   .difficulties-item .content {
-    padding: 15px;
+    padding: 0;
   }
 
   .difficulties-item .content.two:before,
@@ -266,7 +297,7 @@
 
   .difficulties-item .content.two {
     margin: 0 0 40px;
-    padding-left: 15px;
+    padding-left: 0;
   }
 
   .difficulties-item .content .title {
@@ -275,11 +306,11 @@
   }
 
   .difficulties-item .content ul {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 
   .h2-title {
-    font-size: 21px;
+    font-size: 30px;
     line-height: 1;
     br {
       display: block;
@@ -294,7 +325,7 @@
 
   .difficulties-item .content .title,
   .difficulties-item .content ul li {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .difficulties-item .content ul li {
@@ -311,13 +342,13 @@
     text-align: center;
     color: #000;
     font-family: "TT Commons";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     padding-bottom: 20px;
   }
 
   .what {
-    padding: 50px 0;
+    padding: 100px 0;
     position: relative;
     z-index: 2;
     .h2-title {
@@ -328,11 +359,11 @@
   }
 
   .difficulties {
-    padding: 50px 0;
+    padding: 100px 0;
   }
 
   .what-item {
-    padding-left: 35px;
+    padding-left: 0;
   }
 
   .what .h2-title {
@@ -340,7 +371,7 @@
   }
 
   .what-item p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .what-item .content .title {
@@ -375,7 +406,7 @@
   }
 
   .speaker {
-    padding-left: 35px;
+    padding-left: 0;
   }
 
   .speaker-img {
@@ -387,7 +418,7 @@
   }
 
   .speaker ul li {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .carousel-item li {
@@ -395,7 +426,7 @@
   }
 
   .clients {
-    padding: 50px 0;
+    padding: 100px 0 0;
   }
 
   .clients-carousel .owl-nav {
@@ -413,7 +444,7 @@
     max-width: 458px;
     border: 4px solid #625ea7;
     background-color: #fff;
-    padding: 25px 10px;
+    padding: 25px 30px;
     text-align: center;
     margin-right: auto;
 
@@ -441,7 +472,7 @@
   }
 
   .programs {
-    padding: 50px 0;
+    padding: 100px 0 0;
   }
 
   .programs .h2-title {
@@ -450,7 +481,8 @@
   }
 
   .programs-item {
-    padding: 15px 0;
+    padding: 25px 0;
+    margin-bottom: 15px;
   }
 
   .programs-item .content {
@@ -462,7 +494,7 @@
   .programs-item .content ol li {
     color: #222026;
     font-family: "TT Commons";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1;
     margin-bottom: 15px;
@@ -482,7 +514,8 @@
   .programs-item .top .arrow {
     width: 25px;
     height: 25px;
-    padding: 0px;
+    padding: 2px;
+    top: 23px;
   }
 
   .programs-bottom .title {
@@ -504,7 +537,7 @@
   .programs-bottom .items p {
     color: #4a484c;
     font-family: "TT Commons";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 45px;
@@ -525,7 +558,7 @@
   .h2-subtitle {
     color: #625ea7;
     font-family: "TT Commons";
-    font-size: 16x;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 44px;
@@ -547,27 +580,31 @@
   }
 
   .guarantee-item p {
-    font-size: 16px;
+    font-size: 17px;
+    margin-top: 15px;
   }
 
   .guarantee-item {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
   }
 
   .what-num {
     left: 15px;
+        position: static;
+    transform: none;
+    margin-bottom: 20px;
   }
 
   .results-item {
-    padding-left: 15px;
+    padding-left: 0;
   }
 
   .results {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 
   .results-item .h2-title {
-    margin-bottom: 95px;
+    margin-bottom: 64px;
   }
 
   .results-carousel .owl-nav {
@@ -598,7 +635,7 @@
 
   .results-carousel .before ul li,
   .results-carousel .after ul li {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 15px;
   }
@@ -619,7 +656,9 @@
   .number-item span {
     margin-right: 7px;
   }
-
+  .system {
+    padding-top: 100px;
+  }
   .system .h2-title {
     margin-top: 70px;
     margin-bottom: 19px;
@@ -627,6 +666,9 @@
 
   .system .h2-subtitle {
     margin-bottom: 30px;
+    br {
+//      display: block;
+    }
   }
 
   .system-img {
@@ -647,6 +689,9 @@
 
   .item-content {
     max-width: 100%;
+    br {
+      display: block;
+    }
   }
 
   .item-content .img {
@@ -660,7 +705,7 @@
     margin-right: auto;
     color: #4a484c;
     font-family: "TT Commons";
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1;
   }
@@ -684,8 +729,11 @@
   }
 
   .first_stap-item p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
+  }
+  .first_stap {
+    padding-bottom: 80px;
   }
   .footer {
     text-align: center;
@@ -702,7 +750,7 @@
     float: none;
   }
   .programs-item .content ol li:before {
-    font-size: 16px;
+    font-size: 18px;
   }
   .clients-carousel.owl-carousel.owl-loaded {
         max-width: 296px;
@@ -717,6 +765,61 @@
   }
   .results-carousel img {
     right: 15px;
-    min-height: 50px;
+    max-height: 50px;
+  }
+  .difficulties.two {
+    padding-bottom: 60px;
+  }
+  .results-carousel .owl-dots .owl-dot span {
+    font-size: 25px;
+  }
+  .programs-bottom .title br {
+    display: block;
+  }
+  .guarantee .form:before {
+    display: none;
+  }
+  .difficulties-item .img {
+    img {
+      min-height: inherit;
+    }
+  }
+  .item-content p {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  .form .fild input {
+    text-align: center;
+  }
+  .difficulties-bottom div .br {
+    display: block;
+    margin: 10px 0;
+        color: #000;
+  }
+  .guarantee-item {
+    img {
+      width: 100px
+    }
+  }
+  .difficulties-item .content.one ul {
+//    max-width: 285px;
+}
+  .br_mob {
+    display: block;
+  }
+  .results-carousel {
+    ul {
+      li {
+        br {
+          display: block;
+        }
+      }
+    }
+  }
+  .header-speaker p {
+    br {
+      display: block;
+    }
   }
 }

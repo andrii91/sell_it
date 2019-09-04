@@ -283,6 +283,9 @@ font-weight: 400;
 .difficulties-item {
   .img {
 display: block;
+    img {
+      min-height: 590px;
+    }
   }
   .content {
       background-color: #ffffff;
@@ -450,7 +453,7 @@ font-weight: 700;
       font-size: 55px;
       font-weight: 700;
       line-height: 59px;
-      margin-bottom: 65px;
+      margin-bottom: 35px;
     }
     .titlesmall {
       color: #5d5b61;
@@ -639,7 +642,7 @@ font-weight: 700;
     margin-right: 12px;
     border: 1px solid #625ea7 !important;
     transition: .2s;
-    
+    line-height: 1;
     &:hover {
       background: 0 0 !important;
       svg {
@@ -648,8 +651,8 @@ font-weight: 700;
     }
     
     svg {
-      width: 4px;
-      height: 7px;
+          width: 6px;
+    height: 10px;
       fill:#fff;
     }
   }
@@ -681,10 +684,16 @@ background-color: #ffffff;
       font-weight: 700;
     }
   }
-  span {
+  .fild {
     display: block;
     position: relative;
     margin-bottom: 9px;
+    .iti {
+      width: 100%;
+      input {
+            padding-left: 52px;
+      }
+    }
     input {
       color: #4a484c;
     font-family: "TT Commons";
@@ -695,6 +704,9 @@ background-color: #ffffff;
       display: block;
       padding: 18px 24px;
       line-height: 1;
+           -webkit-appearance: none;
+     border-radius: 0;
+      box-shadow: 0 0;
       
     }
   }
@@ -780,7 +792,7 @@ background-color: #ffffff;
       text-align: center;
       padding: 9px;
   transition: .2s;
-      
+      line-height: 1;
       svg {
         fill:#fff;
         width: 10px;

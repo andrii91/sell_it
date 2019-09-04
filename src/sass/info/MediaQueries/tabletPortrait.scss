@@ -9,6 +9,13 @@
       .item-col {
         max-width: 45%;
       }
-      
+      .item-content .title {
+        br {
+          display: block;
+        }
+      }
+      .br_mob {
+        display: none;
+      }
 	}
 }
