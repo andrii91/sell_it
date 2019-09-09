@@ -217,45 +217,45 @@ $(document).ready(function () {
 
   
  
- $('input[name="phone"]').intlTelInput({
-		defaultCountry: "ru",
-		initialCountry: "auto",
-		preferredCountries: ["ua", "ru", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge'],
-		autoPlaceholder: 'aggressive',
-		nationalMode: false,
-		customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-			return "+" + selectedCountryData.dialCode;
-		},
-		geoIpLookup: function(success, failure) {
-			/*
-			$.get( "https://ip-api.com/json/", function( data ) {
-				var countryCode = (data.countryCode) ? data.countryCode : "ru";
-				success(countryCode);
-			}, "json" );*/
+//  $('input[name="phone"]').intlTelInput({
+// 		defaultCountry: "ru",
+// 		initialCountry: "auto",
+// 		preferredCountries: ["ua", "ru", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge'],
+// 		autoPlaceholder: 'aggressive',
+// 		nationalMode: false,
+// 		customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+// 			return "+" + selectedCountryData.dialCode;
+// 		},
+// 		geoIpLookup: function(success, failure) {
+// 			/*
+// 			$.get( "https://ip-api.com/json/", function( data ) {
+// 				var countryCode = (data.countryCode) ? data.countryCode : "ru";
+// 				success(countryCode);
+// 			}, "json" );*/
 			
-			$.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-				var countryCode = (resp && resp.country) ? resp.country : "ru";
-				success(countryCode);
-			});
-		},
-		separateDialCode: false,
-		formatOnDisplay: false,
-//		utilsScript: 'https://mk.beauty-matrix.ru/assets/plugins/intltelinput/js/utils.js',
-	});
+// 			$.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+// 				var countryCode = (resp && resp.country) ? resp.country : "ru";
+// 				success(countryCode);
+// 			});
+// 		},
+// 		separateDialCode: false,
+// 		formatOnDisplay: false,
+// //		utilsScript: 'https://mk.beauty-matrix.ru/assets/plugins/intltelinput/js/utils.js',
+// 	});
  
    
-   $('.check').each(function(){
-      $(this).on('change', function(){
-           var form = $(this).parents('form');
+//    $('.check').each(function(){
+//       $(this).on('change', function(){
+//            var form = $(this).parents('form');
 
-           if( $(this).prop('checked') ) {
+//            if( $(this).prop('checked') ) {
                
-               form.find('.phone').slideDown();
-           } else {
-               form.find('.phone').slideUp();
-           }
-       });
-   });
+//                form.find('.phone').slideDown();
+//            } else {
+//                form.find('.phone').slideUp();
+//            }
+//        });
+//    });
 
   const observer = lozad();
 observer.observe();
